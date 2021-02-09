@@ -56,6 +56,12 @@ function mz_MardkownExt_Path($file, $t = 'path')
 }
 function InstallPlugin_mz_MardkownExt()
 {
+  global $zbp;
+  if (!$zbp->HasConfig('mz_MardkownExt')) {
+    $zbp->Config('mz_MardkownExt')->version = 1;
+    $zbp->Config('mz_MardkownExt')->hooksAllowed = "mz_ShortSth";
+    $zbp->SaveConfig('mz_MardkownExt');
+  }
 }
 function UninstallPlugin_mz_MardkownExt()
 {

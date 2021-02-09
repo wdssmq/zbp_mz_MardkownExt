@@ -2,7 +2,7 @@ $(function () {
   // 文章编辑页
   const id = $("#edtID").val();
   $(".divHeader2").append(
-    `<small class="x-is-right ex2md"><a target="_blank" title="导出为 Markdown" href="${bloghost}zb_users/plugin/mz_MardkownExt/main.php?id=${id}">导出为 Markdown</a></small>`
+    `<small class="x-is-right ex2md"><a target="_blank" title="导出为 Markdown" href="${bloghost}zb_users/plugin/mz_MardkownExt/export.php?id=${id}">导出为 Markdown</a></small>`
   );
 
   if ($(".edt-more").length == 0) {
@@ -37,7 +37,7 @@ $(function () {
     const $title = $_this.find(".td10 + *:not(.td10)");
     const title = $title.text();
     $title.append(
-      `<i class="icon-markdown"></i> <a target="_blank" title="${title}" href="${bloghost}zb_users/plugin/mz_MardkownExt/main.php?id=${id}">Markdown</a>`
+      `<i class="icon-markdown"></i> <a target="_blank" title="${title}" href="${bloghost}zb_users/plugin/mz_MardkownExt/export.php?id=${id}">Markdown</a>`
     );
     // console.log(id, $title.text());
   });
