@@ -89,10 +89,13 @@ function fnYAML2JSON() {
       const $input = $(`#edt${key}`);
       const inputVal = $input.val();
       // console.log(docVal,inputVal);
-      if (typeof el == "array") {
-        docVal = el.join(",");
+      // console.log(typeof docVal);
+      if (typeof docVal == "object") {
+        docVal = docVal.join(",");
+        // console.log(docVal);
       }
-      if (docVal != $input.val()) {
+      if (docVal != inputVal) {
+        console.log(docVal);
         $input.addClass("ui-button-warning");
         err = 1;
         msg = key;

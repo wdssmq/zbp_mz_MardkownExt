@@ -25,6 +25,8 @@ require $blogpath . 'zb_system/admin/admin_top.php';
 <div id="divMain">
   <div class="divHeader"><?php echo $blogtitle; ?></div>
   <div class="SubMenu">
+    <a href="main.php" title="首页"><span class="m-left m-now">首页</span></a>
+    <?php require "about.php"; ?>
   </div>
   <div id="divMain2">
     <!--代码-->
