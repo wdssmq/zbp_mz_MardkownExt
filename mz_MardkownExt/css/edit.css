@@ -36,3 +36,7 @@ small.ex2md a:hover {
 .is-right {
   float: right;
 }
+
+.hidden {
+  display: none;
+}
