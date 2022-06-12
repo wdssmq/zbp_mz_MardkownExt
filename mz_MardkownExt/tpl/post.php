@@ -1,7 +1,8 @@
 ---
 title: {$article.Title}-|
+date: {$article.Time("Y-m-d H:i:s")}-|
 tags:
-- {$article.TagsName}-|
+{mz_MardkownExt_tags2yml($article.TagsName)}-|
 categories:
 - {$article.Category.Name}-|
 id: {$article.ID}-|

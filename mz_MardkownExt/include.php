@@ -66,3 +66,16 @@ function InstallPlugin_mz_MardkownExt()
 function UninstallPlugin_mz_MardkownExt()
 {
 }
+
+// -----
+
+function mz_MardkownExt_tags2yml($strTags)
+{
+  $arrTags = explode(",", $strTags);
+  $arrTags = array_map('trim', $arrTags);
+  $rlt = "";
+  foreach ($arrTags as $tag) {
+    $rlt .= "- " . $tag . "\n";
+  }
+  return trim($rlt);
+}

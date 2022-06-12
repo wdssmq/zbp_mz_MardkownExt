@@ -27,6 +27,8 @@ $md_content = $article->Metas->md_content;
 if (!empty($md_content)) {
   $article->Content = $md_content;
 }
+$article->Content = str_replace("<!--{$article->ID}-->", "", $article->Content);
+$article->Content = trim($article->Content);
 $zbp->template->SetTags('article', $article);
 $hooksAllowed = $zbp->Config('mz_MardkownExt')->hooksAllowed;
 
