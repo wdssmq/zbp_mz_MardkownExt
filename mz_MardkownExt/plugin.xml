@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin version="php">
 <id>mz_MardkownExt</id>
-<name>Markdown工具</name>
+<name>Markdown 工具</name>
 <url>//jq.qq.com/?_wv=1027&amp;k=555hND5</url>
-<note>导出文章为md文本</note>
+<note>导出文章为 md 文本</note>
 <description>置百丈玄冰而崩裂，掷须臾池水而漂摇。</description>
 <path>main.php</path>
 <include>include.php</include>
@@ -18,10 +18,10 @@
   <email></email>
   <url></url>
 </source>
-<adapted>162155</adapted>
-<version>1.0.2</version>
+<adapted>162210</adapted>
+<version>1.0.3</version>
 <pubdate>2021-02-06</pubdate>
-<modified>2021-02-24</modified>
+<modified>2022-06-12</modified>
 <price>0</price>
 <phpver>5.4</phpver>
 <advanced>
