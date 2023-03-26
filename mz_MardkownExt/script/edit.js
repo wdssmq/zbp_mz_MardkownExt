@@ -1,22 +1,24 @@
+/* global jsyaml */
+
 $(function () {
   // 文章编辑页
   const id = $("#edtID").val();
   $(".divHeader2").append(
-    `<small class="x-is-right ex2md"><a target="_blank" title="导出为 Markdown" href="${bloghost}zb_users/plugin/mz_MardkownExt/export.php?id=${id}">导出为 Markdown</a></small>`
+    `<small class="x-is-right ex2md"><a target="_blank" title="导出为 Markdown" href="${bloghost}zb_users/plugin/mz_MardkownExt/export.php?id=${id}">导出为 Markdown</a></small>`,
   );
 
   if ($(".edt-more").length == 0) {
     $("#cheader").append(
-      "<a href='javascript:;' title=\"插入摘要分隔符\" onclick='fnEdtMore();' class=\"edt-more\"> [摘要分隔]</a>"
+      "<a href='javascript:;' title=\"插入摘要分隔符\" onclick='fnEdtMore();' class=\"edt-more\"> [摘要分隔]</a>",
     );
   }
 
   $("#cheader").append(
-    "<a href='javascript:;' title=\"解析YAML\" onclick='fnYAML2JSON();' class=\"edt-yaml\"> [解析YAML]</a>"
+    "<a href='javascript:;' title=\"解析YAML\" onclick='fnYAML2JSON();' class=\"edt-yaml\"> [解析YAML]</a>",
   );
 
   $("#cheader").append(
-    "<a href='javascript:;' title=\"使用YAML填写\" onclick='fnYAML2JSON(1);' class=\"edt-yaml-fill hidden\"> [使用YAML填写]</a>"
+    "<a href='javascript:;' title=\"使用YAML填写\" onclick='fnYAML2JSON(1);' class=\"edt-yaml-fill hidden\"> [使用YAML填写]</a>",
   );
 
   function fnMove() {
@@ -33,18 +35,19 @@ $(function () {
     const $title = $_this.find(".td10 + *:not(.td10)");
     const title = $title.text();
     $title.append(
-      `<i class="icon-markdown"></i> <a target="_blank" title="${title}" href="${bloghost}zb_users/plugin/mz_MardkownExt/export.php?id=${id}">Markdown</a>`
+      `<i class="icon-markdown"></i> <a target="_blank" title="${title}" href="${bloghost}zb_users/plugin/mz_MardkownExt/export.php?id=${id}">Markdown</a>`,
     );
     // console.log(id, $title.text());
   });
 });
 
+// eslint-disable-next-line no-unused-vars
 function fnEdtMore() {
   let strMore = "";
   if (typeof window.EDITORMD == "object") {
     strMore = "xn<!--more-->xf";
   } else {
-    strMore = '<hr class="more" />';
+    strMore = "<hr class=\"more\" />";
   }
   editor_api.editor.content.insert(strMore);
   let oBody = editor_api.editor.content.get();
@@ -53,6 +56,7 @@ function fnEdtMore() {
   editor_api.editor.intro.put("");
 }
 
+// eslint-disable-next-line no-unused-vars
 function fnYAML2JSON(fill = null) {
   let err = 0,
     msg = "";
