@@ -1,6 +1,6 @@
 /* global jsyaml */
 
-$(function () {
+$(function() {
   // 文章编辑页
   const id = $("#edtID").val();
   $(".divHeader2").append(
@@ -29,7 +29,7 @@ $(function () {
   fnMove();
 
   // 文章列表页
-  $("tr").each(function () {
+  $("tr").each(function() {
     const $_this = $(this);
     const id = $_this.find("td:first-child").text();
     const $title = $_this.find(".td10 + *:not(.td10)");
