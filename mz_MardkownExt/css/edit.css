@@ -1,42 +1,16 @@
-div.post_edit input#edtTitle,
-#edtAlias,
-#edtTag {
-  max-width: 520px;
-  margin-left: 0;
-  line-height: 23px;
-}
-#response4,
-#response5,
-#titleheader,
-#divEditTitle,
-#alias,
-#tags {
-  padding-right: 0;
-  margin: 0;
-}
-#divEditPost {
-  margin-top: 0;
-}
-
 small.ex2md {
   padding-right: 270px;
 }
+
 small.ex2md a {
   font-weight: bold;
   font-size: 16px;
   color: grey !important;
   border-bottom: 1px dotted currentColor;
 }
+
 small.ex2md a:hover {
   color: #666 !important;
   border-bottom: 1px solid currentColor;
   /* font-style: italic; */
-}
-
-.is-right {
-  float: right;
-}
-
-.hidden {
-  display: none;
 }

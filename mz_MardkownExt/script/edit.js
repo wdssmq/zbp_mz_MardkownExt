@@ -9,24 +9,17 @@ $(function() {
 
   if ($(".edt-more").length == 0) {
     $("#cheader").append(
-      "<a href='javascript:;' title=\"插入摘要分隔符\" onclick='fnEdtMore();' class=\"edt-more\"> [摘要分隔]</a>",
+      "<a href='javascript:;' title=\"插入摘要分隔符\" onclick='fnEdtMore();' class=\"edt-more\">「摘要分隔」</a>",
     );
   }
 
   $("#cheader").append(
-    "<a href='javascript:;' title=\"解析YAML\" onclick='fnYAML2JSON();' class=\"edt-yaml\"> [解析YAML]</a>",
+    "<a href='javascript:;' title=\"解析 YAML\" onclick='fnYAML2JSON();' class=\"edt-yaml\">「解析 YAML」</a>",
   );
 
   $("#cheader").append(
-    "<a href='javascript:;' title=\"使用YAML填写\" onclick='fnYAML2JSON(1);' class=\"edt-yaml-fill hidden\"> [使用YAML填写]</a>",
+    "<a href='javascript:;' title=\"使用 YAML 填写\" onclick='fnYAML2JSON(1);' class=\"edt-yaml-fill hidden\">「使用 YAML 填写」</a>",
   );
-
-  function fnMove() {
-    $("#edtTitle").unwrap();
-    $("#alias").appendTo("#response5");
-    $("#tags,#ulTag").appendTo("#response5");
-  }
-  fnMove();
 
   // 文章列表页
   $("tr").each(function() {
