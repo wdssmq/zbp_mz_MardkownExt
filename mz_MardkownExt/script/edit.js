@@ -3,7 +3,7 @@
 $(function() {
   // 文章编辑页
   const id = $("#edtID").val();
-  $(".divHeader2").append(
+  $(".divHeader2,.divHeader").append(
     `<small class="x-is-right ex2md"><a target="_blank" title="导出为 Markdown" href="${bloghost}zb_users/plugin/mz_MardkownExt/export.php?id=${id}">导出为 Markdown</a></small>`,
   );
 
