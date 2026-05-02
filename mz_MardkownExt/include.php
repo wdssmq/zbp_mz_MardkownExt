@@ -12,11 +12,11 @@ function mz_MardkownExt_Admin_Insert()
 {
   $act = GetVars("act", "GET");
   if ($act == "ArticleEdt") {
-    echo '<link rel="stylesheet" href="' . mz_MardkownExt_Path("css-edit", "host") . '?v=20260428103">';
-    echo '<script src="' . mz_MardkownExt_Path("js-yaml", "host") . '?v=20260428103"></script>';
+    echo '<link rel="stylesheet" href="' . mz_MardkownExt_Path("css-edit", "host") . '?v=20260502103">';
+    echo '<script src="' . mz_MardkownExt_Path("js-yaml", "host") . '?v=20260502103"></script>';
   }
   if (HasNameInString("ArticleMng|ArticleEdt", $act)) {
-    echo '<script src="' . mz_MardkownExt_Path("js-edit", "host") . '?v=20260428103"></script>';
+    echo '<script src="' . mz_MardkownExt_Path("js-edit", "host") . '?v=20260502103"></script>';
   }
 }
 function mz_MardkownExt_GenTpl(&$templates)

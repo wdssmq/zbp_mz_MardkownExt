@@ -3,9 +3,13 @@
 $(function() {
   // 文章编辑页
   const id = $("#edtID").val();
-  $(".divHeader2,.divHeader").append(
-    `<small class="x-is-right ex2md"><a target="_blank" title="导出为 Markdown" href="${bloghost}zb_users/plugin/mz_MardkownExt/export.php?id=${id}">导出为 Markdown</a></small>`,
-  );
+  const $edtHeader = $(".divHeader2,.divHeader");
+
+  if ($edtHeader.text().indexOf("文章编辑") > -1) {
+    $edtHeader.append(
+      `<small class="x-is-right ex2md"><a target="_blank" title="导出为 Markdown" href="${bloghost}zb_users/plugin/mz_MardkownExt/export.php?id=${id}">导出为 Markdown</a></small>`,
+    );
+  }
 
   if ($(".edt-more").length == 0) {
     $("#cheader").append(
